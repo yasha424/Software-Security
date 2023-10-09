@@ -1,0 +1,30 @@
+curl --request POST \
+  --url 'https://kpi.eu.auth0.com/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data 'audience=https://kpi.eu.auth0.com/api/v2/&grant_type=client_credentials&client_id=JIvCO5c2IBHlAe2patn6l6q5H35qxti0&client_secret=ZRF8Op0tWM36p1_hxXTU-B0K_Gq_-eAVtlrQpY24CasYiDmcXBhNS6IJMNcz1EgB'
+
+
+curl -L 'https://kpi.eu.auth0.com/api/v2/users' \
+-H 'Content-Type: application/json' \
+-H 'Accept: application/json' \
+-H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjVCZTlBZFhrMERaUjhmR1dZYjdkViJ9.eyJpc3MiOiJodHRwczovL2twaS5ldS5hdXRoMC5jb20vIiwic3ViIjoiSkl2Q081YzJJQkhsQWUycGF0bjZsNnE1SDM1cXh0aTBAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8va3BpLmV1LmF1dGgwLmNvbS9hcGkvdjIvIiwiaWF0IjoxNjk2NzkxODEzLCJleHAiOjE2OTY4NzgyMTMsImF6cCI6IkpJdkNPNWMySUJIbEFlMnBhdG42bDZxNUgzNXF4dGkwIiwic2NvcGUiOiJyZWFkOnVzZXJzIGNyZWF0ZTp1c2VycyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.SQz7nwPqpqkVGGw82BM_p5nLxBq5IvexLBvZTYdBHxD8GB5qhV2LmsxvCKHYIUvUVgfDEEsiYgR6jRybSqFo0nRT1EPRK3DA6PEx4wzr8Rt-CGtvfjaqUKn9H_Li_WzkX5chhsLAzsvLU7monas-1yP_4wUtw3IAQumjep9TzorOezdaEwxnUuyB2O62ZB_Z4HN-5lhS3IzTCZTPHabqbtOQZE8fXQTMVjIt6JyCOQAlKqiThjf3aaSCXTktPimcApbCeNt1eMiZmxgMBDJUF1JFoq03x0FvATvUMzG6nERHWOFo3HZcK1JvCMn49_slq6NUMLBKqRuUuQ5bIzW9Tg" \
+-d '{"email":"jakob20022404@gmail.com","connection":"Username-Password-Authentication","password":"qwerty123!"}'
+
+{"created_at":"2023-10-08T19:19:09.355Z","email":"jakob20022404@gmail.com","email_verified":false,"identities":[{"connection":"Username-Password-Authentication","user_id":"652300ad0e517cfa59a401fa","provider":"auth0","isSocial":false}],"name":"jakob20022404@gmail.com","nickname":"jakob20022404","picture":"https://s.gravatar.com/avatar/2dcf2066f0a22eef0de078497e914b8d?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fja.png","updated_at":"2023-10-08T19:19:09.355Z","user_id":"auth0|652300ad0e517cfa59a401fa"}
+
+
+curl --request POST \
+  --url 'https://dev-d9q43cd8.us.auth0.com/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data 'audience=https://dev-d9q43cd8.us.auth0.com/api/v2/&grant_type=client_credentials&client_id=SBAG5My1TL0hePd9MvWEdVkGJkM84For&client_secret=SHcdsMA2WEkNmfEIwWEdw8NTy4IMHXxy2wD-8MlH6-eNHa0XD3LR1KuEbYPicX96'
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImVKOUpfeEpSd2JiSWxwOU1CN0piYSJ9.eyJpc3MiOiJodHRwczovL2Rldi1kOXE0M2NkOC51cy5hdXRoMC5jb20vIiwic3ViIjoiU0JBRzVNeTFUTDBoZVBkOU12V0VkVmtHSmtNODRGb3JAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vZGV2LWQ5cTQzY2Q4LnVzLmF1dGgwLmNvbS9hcGkvdjIvIiwiaWF0IjoxNjk2ODQzNDgwLCJleHAiOjE2OTY5Mjk4ODAsImF6cCI6IlNCQUc1TXkxVEwwaGVQZDlNdldFZFZrR0prTTg0Rm9yIiwic2NvcGUiOiJyZWFkOnVzZXJzIHVwZGF0ZTp1c2VycyBkZWxldGU6dXNlcnMgY3JlYXRlOnVzZXJzIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.g38i4AR9xSpTtNOoq88hnHzoSxyY8-JxSQjYmQCSFC9r_GW54oMOim6hmzHRmXnBNWmj7ia-7foK72LdOW2-Zo4JpMG3mgaG1xBkKtIcLIumZP_5-jsFLdk9VLpZRPsN2V1jRt_FiXyaO2KpMmQgB2c51HOcMyzghKVl_j670UGmGJjR5lbZfJPKckD5S2jA6dtSLxLl1QmPyGbVhAvBoX20nOxCbX4LDfq3zF5vREeCbjgAQLXoN6pzTIA2r_ujPmQuUL7exAXPkqTkfWjWrb37tW0gxulcWzHmHNTLC9ERGI9gMuaM51o_CaLDKnzjDzohzbrKedqy_ZogX5VTlg
+
+
+curl -L 'https://dev-d9q43cd8.us.auth0.com/api/v2/users' \
+-H 'Content-Type: application/json' \
+-H 'Accept: application/json' \
+-H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImVKOUpfeEpSd2JiSWxwOU1CN0piYSJ9.eyJpc3MiOiJodHRwczovL2Rldi1kOXE0M2NkOC51cy5hdXRoMC5jb20vIiwic3ViIjoiU0JBRzVNeTFUTDBoZVBkOU12V0VkVmtHSmtNODRGb3JAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vZGV2LWQ5cTQzY2Q4LnVzLmF1dGgwLmNvbS9hcGkvdjIvIiwiaWF0IjoxNjk2ODQzNDgwLCJleHAiOjE2OTY5Mjk4ODAsImF6cCI6IlNCQUc1TXkxVEwwaGVQZDlNdldFZFZrR0prTTg0Rm9yIiwic2NvcGUiOiJyZWFkOnVzZXJzIHVwZGF0ZTp1c2VycyBkZWxldGU6dXNlcnMgY3JlYXRlOnVzZXJzIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.g38i4AR9xSpTtNOoq88hnHzoSxyY8-JxSQjYmQCSFC9r_GW54oMOim6hmzHRmXnBNWmj7ia-7foK72LdOW2-Zo4JpMG3mgaG1xBkKtIcLIumZP_5-jsFLdk9VLpZRPsN2V1jRt_FiXyaO2KpMmQgB2c51HOcMyzghKVl_j670UGmGJjR5lbZfJPKckD5S2jA6dtSLxLl1QmPyGbVhAvBoX20nOxCbX4LDfq3zF5vREeCbjgAQLXoN6pzTIA2r_ujPmQuUL7exAXPkqTkfWjWrb37tW0gxulcWzHmHNTLC9ERGI9gMuaM51o_CaLDKnzjDzohzbrKedqy_ZogX5VTlg" \
+-d '{"email":"jakob20022404@gmail.com","connection":"Username-Password-Authentication","password":"qwerty123!"}'
+
+{"created_at":"2023-10-09T09:26:11.543Z","email":"jakob20022404@gmail.com","email_verified":false,"identities":[{"connection":"Username-Password-Authentication","user_id":"6523c7330d85a79a4cc55528","provider":"auth0","isSocial":false}],"name":"jakob20022404@gmail.com","nickname":"jakob20022404","picture":"https://s.gravatar.com/avatar/2dcf2066f0a22eef0de078497e914b8d?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fja.png","updated_at":"2023-10-09T09:26:11.543Z","user_id":"auth0|6523c7330d85a79a4cc55528"}
