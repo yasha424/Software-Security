@@ -1,0 +1,32 @@
+curl --request POST \
+  --url 'https://dev-d9q43cd8.us.auth0.com/oauth/token' \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data 'grant_type=http://auth0.com/oauth/grant-type/password-realm' \
+  --data 'client_id=SBAG5My1TL0hePd9MvWEdVkGJkM84For' \
+  --data 'client_secret=SHcdsMA2WEkNmfEIwWEdw8NTy4IMHXxy2wD-8MlH6-eNHa0XD3LR1KuEbYPicX96' \
+  --data 'audience=https://dev-d9q43cd8.us.auth0.com/api/v2/' \
+  --data 'scope=offline_access&realm=Username-Password-Authentication' \
+  --data 'username=jakob20022404@gmail.com&password=qwerty123!'
+
+
+curl --request POST \
+  --url 'https://dev-d9q43cd8.us.auth0.com/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data 'grant_type=refresh_token' \
+  --data 'client_id=SBAG5My1TL0hePd9MvWEdVkGJkM84For' \
+  --data 'client_secret=SHcdsMA2WEkNmfEIwWEdw8NTy4IMHXxy2wD-8MlH6-eNHa0XD3LR1KuEbYPicX96' \
+  --data 'refresh_token=HdPSlDuVuygztqHKqVNIUx8kKdzO4Gl4fqTpTc8lryD-g'
+
+curl --request POST \
+  --url 'https://dev-d9q43cd8.us.auth0.com/oauth/token' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --data 'audience=https://dev-d9q43cd8.us.auth0.com/api/v2/&grant_type=client_credentials' \
+  --data 'client_id=SBAG5My1TL0hePd9MvWEdVkGJkM84For' \
+  --data 'client_secret=SHcdsMA2WEkNmfEIwWEdw8NTy4IMHXxy2wD-8MlH6-eNHa0XD3LR1KuEbYPicX96'
+
+
+curl --request PATCH \
+  --url 'https://dev-d9q43cd8.us.auth0.com/api/v2/users/auth0|6523d9eb192bf80813dc6c35' \
+  --header 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImVKOUpfeEpSd2JiSWxwOU1CN0piYSJ9.eyJpc3MiOiJodHRwczovL2Rldi1kOXE0M2NkOC51cy5hdXRoMC5jb20vIiwic3ViIjoiU0JBRzVNeTFUTDBoZVBkOU12V0VkVmtHSmtNODRGb3JAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vZGV2LWQ5cTQzY2Q4LnVzLmF1dGgwLmNvbS9hcGkvdjIvIiwiaWF0IjoxNjk3MDMxNzY3LCJleHAiOjE2OTcxMTgxNjcsImF6cCI6IlNCQUc1TXkxVEwwaGVQZDlNdldFZFZrR0prTTg0Rm9yIiwic2NvcGUiOiJyZWFkOnVzZXJzIHVwZGF0ZTp1c2VycyBkZWxldGU6dXNlcnMgY3JlYXRlOnVzZXJzIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.TBIY0In319WyITmZlGuYhjqerYhvnsekyWvNCj9gUTRf2DqHnSvKXS5AeXUU2RQCVwTIZVCs4n3RYao8b5eHuCn_yDePCI09G124ekrAOmemPetJYHuGH1xeIDOFwBKDUt2wNXlOS2b8T-QDdMtB2hU93o2PD3BXPzTTIojzplJlTNfo9HQS6V9XK3HYFNVtEbXNCRVe1ssbqQEGIabLs5o5qFU_DRbsaX3LCy1ihBYgd_-1by4_PQFMXCDSSPB6zTUyhvtCrtxpIczaaFqU4RHO5X7P841KchPxmRt2SUExBxXYabrDm5h7YLm873U6r36iiigPZgZgtP4fcWf5bg' \
+  --header 'content-type: application/json' \
+  --data '{"password": "qwerty1234!","connection": "Username-Password-Authentication"}'
