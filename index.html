@@ -194,7 +194,7 @@
                 location.reload();
             }).catch((response) => {
                 loginErrorMsg.style.opacity = 1;
-                loginErrorMsg.innerHTML = response
+                loginErrorMsg.innerHTML = response.response.data
             });
         })
     </script>

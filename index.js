@@ -72,7 +72,6 @@ app.post('/api/login', async (req, res) => {
         });
         const data = response.data;
         res.status(201).send({ 
-            username: username, 
             access_token: data.access_token, 
             refresh_token: data.refresh_token 
         });
