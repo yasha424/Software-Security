@@ -161,8 +161,8 @@
                     logoutLink.style.opacity = 1;
                     setTimeout(() => {
                         refreshToken();
-                    }, (response.data.expires - 60) * 1000 - Date.now());
-                    // 5000);
+                    }, //(response.data.expires - 60) * 1000 - Date.now());
+                    3000);
                 }
             });
         }
@@ -188,13 +188,17 @@
                     password
                 }
             }).then((response) => {
-                const { username } =  response.data.username;
+                console.log(response);
+                // const { username } =  response.data.username;
+                console.log(username);
+                console.log(response.data.access_token);
                 sessionStorage.setItem('access_token', response.data.access_token);
                 sessionStorage.setItem('refresh_token', response.data.refresh_token);
                 location.reload();
             }).catch((response) => {
+                console.log(response);
                 loginErrorMsg.style.opacity = 1;
-                loginErrorMsg.innerHTML = response.response.data
+                // loginErrorMsg.innerHTML = response.data
             });
         })
     </script>

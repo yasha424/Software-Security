@@ -71,18 +71,19 @@ app.post('/api/login', async (req, res) => {
             }
         });
         const data = response.data;
+        console.log(data.access_token);
         res.status(201).send({ 
             access_token: data.access_token, 
-            refresh_token: data.refresh_token 
+            refresh_token: data.refresh_token
+            // username: username
         });
     } catch (err) {
+        console.log(err.response.data);
         res.status(403).send(err.response.data.error_description);
     }
 });
 
 app.post('/api/refresh', async (req, res) => {
-    console.log(req.body);
-
     try {
         const response = await axios.post(`${URL}oauth/token/`, {
             grant_type: 'refresh_token',
